@@ -247,7 +247,6 @@ console.log(a);
 //LOGIC:
 //When we find a new largest, the previous largest becomes the second largest.
 //Update second largest when there is an element that is not more than the largest but is greater than second largest
-
 function secondLargest(arr) {
     if (arr.length < 2)
         return -1;
@@ -258,7 +257,7 @@ function secondLargest(arr) {
             s = l;
             l = arr[i];
         }
-        else if (arr[i] > s) {
+        else if (arr[i] > s && arr[i] != l) {
             s = arr[i];
         }
     }
@@ -266,13 +265,18 @@ function secondLargest(arr) {
 }
 
 //Test Cases:
-a = secondLargest([1, -2, 18, 5, -18, 7]);
+//EDGE CASES:
+//1. Empty Array
+//2. Array with 1 element
+//3. Array with negative elements
+//4. Array with duplicates
+a = secondLargest([1,18, -2, 18, 5, -18, 7]); //check for duplicates and negative numbers
 console.log(a);
-a = secondLargest([]);
+a = secondLargest([]); //Check empty array
 console.log(a);
-a = secondLargest([8]);
+a = secondLargest([8]); // check single element array
 console.log(a);
 a = secondLargest([1, 2, 4, 5, 7]);
 console.log(a);
-a = secondLargest([-11, -2, -4, -5, -18, -7]);
+a = secondLargest([-11, -2, -4, -5, -18, -7]); //Check naegative
 console.log(a);
