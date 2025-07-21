@@ -149,3 +149,130 @@ function checkVotingEligibility_switch(age) {
             return "Invalid age";
     }
 }
+
+//PROBLEM1
+// Write a function that checks if an element is present in an array and returns the corresponding index.
+//if the element is not found, return -1.
+function test_problem1(arr, ele)
+{
+    let l = arr.length;
+    for (let i = 0; i < l; i++)
+    {
+        if (arr[i] == ele)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
+//PROBLEM1: Test Cases:
+let test_res = test_problem1([1, 2, 4, 5, 18, 7], 5);
+console.log(test_res);
+test_res = test_problem1([1, 2, 4, 5, 18, 7], 10);
+console.log(test_res);
+
+//PROBLEM2
+// Write a function that takes an array of numbers and returns the count of all negative numbers in it.
+
+function test_problem2(arr)
+{
+    let count = 0;
+    for (let i = 0; i < arr.length; i++)
+    {
+        if (arr[i] < 0)
+        {
+            count=count+1;
+        }
+    }
+    return count;
+}
+
+//Test Cases:
+a = test_problem2([1, -2, 4, 5, -18, 7]);
+console.log(a);
+a = test_problem2([1, 2, 4, 5, -18, 7]);
+console.log(a);
+
+//PROBLEM3
+// Write a function that takes an array of numbers and returns largest number in it.
+function test_problem3(arr)
+{
+    let largest = arr[0];
+    for (let i = 0; i < arr.length; i++)
+    {
+        if (arr[i] > largest)
+        {
+            largest = arr[i];
+        }
+    }
+    return largest;
+}
+
+//Test Cases:
+a = test_problem3([1, -2, 18, 5, -18, 7]);
+console.log(a);
+a = test_problem3([1, 2, 4, 5, -18, 7]);
+console.log(a);
+a = test_problem3([-11, -2, -4, -5, -18, -7]);
+console.log(a);
+
+
+//PROBLEM4
+// Write a function that takes an array of numbers and returns smallest number in it.
+
+function test_problem4(arr)
+{
+    let s = arr[0];
+    for (let i = 0; i < arr.length; i++)
+    {
+        if (arr[i] < s)
+        {
+            s = arr[i];
+        }
+    }
+    return s;
+}
+
+//Test Cases:
+a = test_problem4([1, -2, 18, 5, -18, 7]);
+console.log(a);
+a = test_problem4([1, 2, 4, 5, -98, 7]);
+console.log(a);
+a = test_problem4([-11, -2, -4, -5, -18, -7]);
+console.log(a);
+
+//PROBLEM: 
+//Write a function that returns the second largest number in an array of numbers.
+//LOGIC:
+//When we find a new largest, the previous largest becomes the second largest.
+//Update second largest when there is an element that is not more than the largest but is greater than second largest
+
+function secondLargest(arr) {
+    if (arr.length < 2)
+        return -1;
+    let l = arr[0];
+    let s = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > l) {
+            s = l;
+            l = arr[i];
+        }
+        else if (arr[i] > s) {
+            s = arr[i];
+        }
+    }
+    return s;
+}
+
+//Test Cases:
+a = secondLargest([1, -2, 18, 5, -18, 7]);
+console.log(a);
+a = secondLargest([]);
+console.log(a);
+a = secondLargest([8]);
+console.log(a);
+a = secondLargest([1, 2, 4, 5, 7]);
+console.log(a);
+a = secondLargest([-11, -2, -4, -5, -18, -7]);
+console.log(a);
