@@ -280,3 +280,192 @@ a = secondLargest([1, 2, 4, 5, 7]);
 console.log(a);
 a = secondLargest([-11, -2, -4, -5, -18, -7]); //Check naegative
 console.log(a);
+
+/*******
+ * STAR PATTERNS*
+*******/
+
+let n = 4;
+
+//Star Pattern 1
+console.log("STAR PATTERN 1")
+for (let i = 0; i < n; i++) {
+    let s = "";
+    for (let j = 0; j < n; j++) {
+        s = s + "*"
+    }
+    console.log(s);
+}
+
+console.log("--------------------------")
+
+console.log("STAR PATTERN 2")
+for (let i = 0; i < n; i++) {
+    let s = "";
+    for (let j = 0; j <= i; j++) {
+        s = s + "*"
+    }
+    console.log(s);
+}
+
+console.log("--------------------------")
+
+n = 5
+console.log("STAR PATTERN 3")
+for (let i = 1; i <= n; i++) {
+    let s = "";
+    for (let j = 1; j <= i; j++) {
+        s = s + j;
+    }
+    console.log(s);
+}
+
+console.log("--------------------------")
+
+n = 5
+console.log("STAR PATTERN 4")
+for (let i = 1; i <= n; i++) {
+    let s = "";
+    for (let j = 1; j <= i; j++) {
+        s = s + i;
+    }
+    console.log(s);
+}
+
+console.log("--------------------------")
+
+n = 5
+console.log("STAR PATTERN 5 - 1st Way")
+for (let i = 1; i <= n; i++) {
+    let s = "";
+    for (let j = n; j >= i; j--) {
+        s = s + (n - j + 1);
+    }
+    console.log(s);
+}
+
+console.log("--------------------------")
+
+n = 5
+console.log("STAR PATTERN 5 - 2nd Way")
+for (let i = n; i >= 1; i--) {
+    let s = "";
+    for (let j = 1; j <= i; j++) {
+        s = s + j;
+    }
+    console.log(s);
+}
+
+console.log("--------------------------")
+
+n = 5
+console.log("STAR PATTERN 6 - 1st Way")
+for (let i = 1; i <= n; i++) {
+    let s = "";
+    for (let j = n; j >= i; j--) {
+        s = s + '*';
+    }
+    console.log(s);
+}
+
+console.log("--------------------------")
+
+n = 5
+console.log("STAR PATTERN 6 - 2nd Way")
+for (let i = n; i >= 1; i--) {
+    let s = "";
+    for (let j = 1; j <= i; j++) {
+        s = s + '*';
+    }
+    console.log(s);
+}
+
+console.log("--------------------------")
+
+n = 5
+console.log("STAR PATTERN 7 - 1st Way")
+for (let i = n; i >= 1; i--) {
+    let s = "";
+    for (let j = 1; j <= n; j++) {
+        if (j < i) {
+            s = s + " ";
+        }
+        else {
+            s = s + "*";
+        }
+    }
+    console.log(s);
+}
+
+console.log("--------------------------")
+
+n = 5
+console.log("STAR PATTERN 7 - 2nd Way")
+for (let i = 0; i < n; i++) {
+    let s = "";
+    for (let j = 0; j < n - i + 1; j++) {
+        s = s + " ";
+    }
+    for (let j = 0; j < i + 1; j++) {
+        s = s + "*";
+    }
+    console.log(s);
+}
+
+console.log("--------------------------")
+
+n = 6
+console.log("STAR PATTERN 8 - Way 1")
+for (let i = 1; i <= n; i++) {
+    let s = "";
+    for (let j = 1; j <= i; j++) {
+        if (j % 2 == 0)
+        {
+            s = s + '0';
+        }        
+        else {
+            s = s + '1';
+        }
+    }
+    console.log(s);
+}
+
+console.log("--------------------------")
+
+n = 6
+console.log("STAR PATTERN 8 - Way 2")
+for (let i = 1; i <= n; i++) {
+    let s = "";
+    let toggle = 1;
+    for (let j = 1; j <= i; j++) {
+        s = s + toggle;
+        if (toggle == 0)
+        {
+            toggle = 1;
+        }
+        else
+        {
+            toggle = 0;
+        }
+    }
+    console.log(s);
+}
+
+console.log("--------------------------")
+
+n = 5
+console.log("STAR PATTERN 9")
+let toggle = 1;
+for (let i = 1; i <= n; i++) {
+    let s = "";
+    for (let j = 1; j <= i; j++) {
+        s = s + toggle;
+        if (toggle == 0) {
+            toggle = 1;
+        }
+        else {
+            toggle = 0;
+        }
+    }
+    console.log(s);
+}
