@@ -282,7 +282,8 @@ a = secondLargest([-11, -2, -4, -5, -18, -7]); //Check naegative
 console.log(a);
 
 /*******
- * STAR PATTERNS*
+ * LOOP IN LOOP *
+ * STAR PATTERNS *
 *******/
 
 let n = 4;
